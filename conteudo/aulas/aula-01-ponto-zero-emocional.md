@@ -152,14 +152,14 @@ Primeiro a pessoa responde. Depois o método organiza o relato. Somente em uma e
 - orientar escrita contínua, mas sem transformar velocidade em obrigação;
 - permitir pausas quando houver ativação emocional.
 
-### 5. Exercício guiado: perguntas 1 a 9 — 30 minutos
+### 5. Exercício guiado: perguntas 1 a 9 — 25 minutos
 
 - perguntas 1 e 2: emoções e situações;
 - perguntas 3 a 5: gatilhos, relações e obrigações;
 - perguntas 6 a 8: bloqueios, faltas e necessidades;
 - pergunta 9: história familiar e necessidades não atendidas.
 
-### 6. Organização do material revelado — 10 minutos
+### 6. Organização do material revelado — 8 minutos
 
 Solicitar que a mentorada sublinhe, sem interpretar ainda:
 
@@ -169,17 +169,26 @@ Solicitar que a mentorada sublinhe, sem interpretar ainda:
 - três palavras ligadas a faltas ou necessidades;
 - uma frase que resume o padrão percebido.
 
-### 7. Ponte com o mapa astral — 5 minutos
+### 7. Leitura inicial com a Madame Aline — 12 minutos
 
 - explicar que as respostas serão usadas como pistas para o Raio-X Astrológico;
-- apresentar apenas a lógica geral das correspondências, sem realizar leitura individual completa;
-- reforçar que o mapa oferece hipóteses e linguagem, não uma sentença.
+- orientar cada mentorada a reunir as respostas das perguntas 1 a 9;
+- orientar o envio das respostas e da foto do mapa astral para o Plugin Madame Aline;
+- solicitar à Madame Aline a identificação das características do mapa que aparecem evidenciadas nas respostas;
+- gerar e salvar o **Relatório Raio-X Inicial**;
+- reforçar que o relatório oferece correlações e hipóteses de investigação, não uma sentença ou diagnóstico.
 
 ### 8. Fechamento — 5 minutos
 
 - fazer uma breve retomada corporal e emocional;
-- pedir que cada mentorada registre uma palavra sobre como encerra a aula;
-- lembrar que não é necessário resolver nada imediatamente: a primeira tarefa é enxergar.
+- lembrar que não é necessário resolver tudo imediatamente: a primeira tarefa é enxergar;
+- encerrar com a orientação abaixo.
+
+> **Agora, coloque suas respostas e a foto do seu mapa astral no Plugin Madame Aline. Peça que ela identifique quais características do seu mapa foram evidenciadas nas suas respostas e gere o seu Relatório Raio-X Inicial.**
+
+### Comando sugerido para a Madame Aline
+
+> A seguir, enviarei minhas respostas às nove perguntas da Aula 1 e a foto do meu mapa astral. Identifique quais características do meu mapa aparecem evidenciadas nas minhas respostas. Organize a análise em: padrões emocionais, gatilhos e reações, bloqueios e faltas percebidas, necessidades emocionais e possíveis padrões familiares ou sistêmicos. Para cada correlação, indique a resposta utilizada como evidência e o código astrológico relacionado. Apresente as associações como hipóteses de investigação, sem diagnóstico ou afirmações deterministas. Ao final, gere o meu Relatório Raio-X Inicial.
 
 ## Entregável da mentorada
 
@@ -191,7 +200,8 @@ Ao final da aula, cada participante terá uma **Ficha de Ponto Zero**, contendo:
 - principais gatilhos;
 - reações automáticas;
 - necessidades e faltas percebidas;
-- primeira hipótese pessoal sobre o padrão que hoje ocupa o lugar de prioridade.
+- primeira hipótese pessoal sobre o padrão que hoje ocupa o lugar de prioridade;
+- Relatório Raio-X Inicial gerado pela Madame Aline a partir das respostas e do mapa astral.
 
 ## Tarefa de integração
 
@@ -213,6 +223,9 @@ Não é necessário mudar a reação nesta etapa. A proposta é ampliar a capaci
 - não interpretar relatos familiares como fatos objetivos sem contexto;
 - não induzir memórias nem afirmar causas que a participante não trouxe;
 - não usar o mapa para confirmar culpa, abuso, diagnóstico ou intenção de terceiros;
+- lembrar que a foto do mapa astral pode revelar data, horário e local de nascimento; orientar a mentorada a compartilhar esses dados apenas no ambiente oficial da Madame Aline;
+- não inserir nas respostas nomes completos, documentos, endereços ou outros dados de terceiros;
+- revisar o relatório da Madame Aline como material interpretativo, sem tratá-lo como verdade absoluta;
 - trocar promessas de “cura” por linguagem de consciência, reflexão e possibilidade de mudança;
 - orientar busca de apoio profissional quando surgirem sofrimento intenso, risco ou temas clínicos;
 - preservar privacidade e confidencialidade dos relatos compartilhados no grupo.
@@ -230,10 +243,11 @@ Não é necessário mudar a reação nesta etapa. A proposta é ampliar a capaci
 1. O nome “O Ponto Zero Emocional” representa bem a primeira aula?
 2. A primeira aula terá 90 minutos ou outro formato?
 3. Quais elementos astrológicos fazem oficialmente parte do Raio-X para cada uma das quatro camadas?
-4. A leitura do mapa será apresentada brevemente nesta aula ou ficará totalmente para o encontro seguinte?
+4. Qual será o formato oficial do Relatório Raio-X Inicial gerado pela Madame Aline?
 5. A expressão “prioridade inconsciente” pertence ao vocabulário do método?
 6. A Ficha de Ponto Zero será individual e privada ou haverá alguma partilha orientada?
 7. O exercício será repetido no encerramento da mentoria exatamente como está ou em uma versão própria do Raio-X?
+8. O nome definitivo na comunicação será “Plugin Madame Aline” ou apenas “Madame Aline”?
 
 ## Fontes utilizadas
 
