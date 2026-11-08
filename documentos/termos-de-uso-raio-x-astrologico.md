@@ -1,5 +1,9 @@
 # Termos de Uso do Raio-X Astrológico
 
+**PASSO OBRIGATÓRIO: Termos de Uso e Condições do Raio-X Astrológico!**
+
+Por que a leitura e o seu aceite são fundamentais? Ao clicar em “Li e aceito os termos”, confirmar sua compra ou acessar a área de membros na Hotmart (ou em outra plataforma que venha a ser adotada), você adere integralmente e sem ressalvas às diretrizes dispostas a seguir, **que servem para proteger sua jornada, a segurança dos grupos de apoio e os direitos autorais do método.**
+
 ## CLÁUSULA 1 – OBJETO E NATUREZA DO TREINAMENTO
 
 **1.1.** O presente contrato regulamenta o acesso e a participação no **Treinamento Raio-X Astrológico**, estruturado na modalidade de **curso livre**, de natureza educacional e de desenvolvimento pessoal, baseado nas metodologias autorais desenvolvidas por Aline Santos.
