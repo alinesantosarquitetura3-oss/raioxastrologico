@@ -7,6 +7,9 @@ desktop.ini
 *.bak
 tmp/
 
+# Relatórios individuais contêm dados pessoais e não devem ir para o GitHub
+Relatórios Madame Aline/
+
 # Editores
 .vscode/
 .idea/
