@@ -1,10 +1,12 @@
 # Caderno Digital Raio-X Astrológico
 
-Primeira versão funcional do caderno de exercícios da mentoria.
+Versão funcional completa do caderno de exercícios da mentoria.
 
 ## O que esta versão faz
 
-- conduz a mentorada pelas nove perguntas do Raio-X Inicial;
+- apresenta um índice clicável com os 19 exercícios e o teste bônus;
+- preserva as nove perguntas do Raio-X Inicial dentro do Exercício 2;
+- mostra o percentual preenchido em cada exercício e no caderno completo;
 - salva o progresso somente no navegador;
 - permite revisar e alterar as respostas;
 - organiza um relatório-resumo fiel ao que foi escrito;
@@ -24,4 +26,4 @@ Versão privada: <https://caderno-raio-x-astrologico.alinesantosarq.chatgpt.site
 
 ## Próxima evolução
 
-Os outros exercícios serão incorporados somente depois de reescritos e validados como conteúdo autoral do Raio-X Astrológico.
+Os enunciados foram organizados em formato digital e poderão ser refinados conforme o conteúdo autoral do Raio-X Astrológico for validado.

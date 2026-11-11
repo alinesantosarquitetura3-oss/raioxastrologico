@@ -1,213 +1,40 @@
-const STORAGE_KEY = "raiox-caderno-v1";
+const KEY="raiox-caderno-completo-v2", OLD="raiox-caderno-v1";
+const data=[
+["e01",1,"Compromisso diário","2","Ponto de partida",["Escreva seu compromisso de hoje com a sua felicidade","Qual atitude concreta tornará esse compromisso visível hoje?","Ao final do dia: como você se sentiu e o que percebeu?"]],
+["e02",2,"Ponto Zero e Pacto de Prioridade","2–16","Ponto de partida",["Eu não aguento mais me sentir...","Eu não aguento mais viver estas situações...","Eu não aguento mais ouvir estas coisas...","Quando ouço isso, eu...","Eu não aguento mais que determinadas pessoas me...","Quando elas fazem isso, eu...","Eu não aguento mais ter que...","Quando isso acontece, eu sinto e reajo assim...","Eu não aguento mais não conseguir...","Por não conseguir, eu acabo...","Eu não aguento mais não ter...","Por não ter isso, eu sinto e reajo assim...","Eu não aguento mais não me sentir...","Por não me sentir assim, eu tenho agido desta maneira...","Pai: eu queria que você... Mas sentia que você...","Mãe: eu queria que você... Mas sentia que você...","Outros familiares: eu queria que vocês... Mas sentia que vocês...","Eu quero me sentir...","Para me sentir assim, acredito que preciso de...","Quem tem o que desejo parece se sentir... Quem não tem parece se sentir...","No passado, quem tinha ou não tinha o que desejo? Como eu julgava essa pessoa?","O que sinto que deveria abandonar ou transformar?","Se abandonar isso, o que acredito que posso perder?","Como imagino que as pessoas poderiam me julgar?","Quem fez algo parecido no passado e como foi visto?","Qual ideia inconsciente ou preço do julgamento identifico?","Para quem estou tentando provar algo? O quê?","Que nova ideia me permite priorizar minha felicidade?","Meu pacto de prioridade comigo é..."]],
+["e03",3,"As respostas que a mente procura","17–19","Crenças e visão de mundo",["Como me sinto diante de Deus, espiritualidade e sentido da vida?","Quais perguntas sobre sofrimento e injustiça continuam sem resposta?","O que acredito sobre livre-arbítrio?","O que acredito sobre escolhas, consequências e colheitas?","Essas ideias me fazem sentir segura ou insegura? Por quê?","A vida parece justa ou injusta a partir delas?","Que percepções inconscientes reconheço agora?","Quais ideias desejo manter e quais reconsiderar?"]],
+["e04",4,"O que me trouxe até aqui","20–22","Crenças e visão de mundo",["Área de maior desconforto","Acredito que existe um problema porque...","Meu desejo é conseguir...","Não aguento mais me sentir...","Se alcançar o desejo, vou me sentir...","Movimentos que acredito precisar fazer","Movimentos que tenho feito de fato","Por que tenho agido assim?","Acho que mereço porque sou...","O que me incomoda em quem já tem o que desejo?","De quem essas características me lembram?","Quais ideias negativas eu tinha sobre essas pessoas?","Por isso, acabei me tornando alguém que...","O que preciso aprender com elas?","Ações que posso começar hoje","Eu evitava agir porque achava que poderia...","Crença antiga que cancelo e nova ideia que escolho"]],
+["e05",5,"Intenção inacessível","22–23","Relações e projeções",["Atitude minha, de boa intenção, que foi recebida de outra forma","Como me senti quando minha intenção não foi reconhecida?","Situação em que me senti atacada, embora o outro dissesse agir para meu bem","Como me senti?","Pessoa considerada difícil em quem reconheço qualidades: como eu a explicaria?","O que isso revela sobre intenção, aparência e interpretação?"]],
+["e06",6,"Abandonando o saber sobre as intenções","23–27","Relações e projeções",["Pai: o que eu via, como interpretava, sentia e reagia?","Ideias que formei sobre meu pai","Momento em que o percebi de outra forma","Mãe: o que eu via, como interpretava, sentia e reagia?","Ideias que formei sobre minha mãe","Momento em que a percebi de outra forma","Irmãos ou outros: o que eu via, interpretava e fazia?","Ideias formadas nessas experiências","Outras pessoas ou situações para investigar","Como tenho vivido por causa dessas ideias?"]],
+["e07",7,"Expansão da consciência","28–29","Nova consciência",["Como eu percebia a vida antes?","Quais conceitos novos fizeram sentido?","Quais ideias antigas deixaram de fazer sentido?","Por quais ideias desejo substituí-las?","Como a nova consciência beneficia minhas escolhas?","Como o movimento contrário me prejudicaria?","Como me sinto diante dessa nova percepção?"]],
+["e08",8,"Ganhos secundários","30–40","Padrões e ganhos",["Área ou problema que escolhi investigar","Como me sinto? Nomeie a emoção","Por que me sinto assim?","O que ganho ao me colocar nessa posição?","O que evito ao manter esse padrão?","O que temo que aconteça de pior?","O que ganho evitando tudo isso?","O que perco ao continuar assim?","Quais ideias preciso mudar?","Por quais ideias desejo substituí-las?","Quais ações práticas interrompem esse ganho que me aprisiona?"]],
+["e09",9,"Inventário de ganhos secundários","40","Padrões e ganhos",["Todos os ganhos secundários que identifiquei","Quais aparecem em mais de uma área?","Quais custos também se repetem?","Qual padrão preciso trabalhar primeiro? Por quê?"]],
+["e10",10,"Ideias primárias","41–45","Origem e pertencimento",["Quais frases sobre não ter pedido para nascer, ter vindo na hora errada ou à família errada ressoam em mim?","Que ideias de ser peso, erro, vergonha, salvação ou grande esperança da família reconheço?","Sinto que vim para unir, agradar, compensar, provar ou cumprir alguma função?","Que histórias fizeram essas ideias parecerem verdadeiras?","Como elas influenciam minha vida hoje?","Que compreensão mais adulta e cuidadosa desejo construir?"]],
+["e11",11,"Minha chegada e minha responsabilidade","45–46","Origem e pertencimento",["Mudanças positivas que associo à minha chegada","Mudanças negativas que associo à minha chegada","Entendi que onde chego eu trago...","Entendo que não consegui...","Entendo que consegui fazer com que...","Acreditei que minha função era...","Quem abriu mão, perdeu ou ganhou algo por minha chegada?","Quem ou o que teria ficado para trás?","Como acredito que outros foram vistos por minha causa?","Acreditar nisso me faz sentir...","Por isso, entendi que eu era... e passei a viver...","Qual missão inconsciente escolho devolver?"]],
+["e12",12,"Ideias inconscientes e as cadeiras ocupadas","47–57","Crenças por área",["Maternidade: o que penso ao ver uma mãe priorizando trabalho, lazer ou independência?","Como minha mãe agia e o que a criança que fui desejava?","Que modelo materno considero justo? Como ele aparece hoje?","Que ideias maternas antigas desejo trocar?","Paternidade: o que penso ao ver um pai priorizando trabalho, lazer ou independência?","Como meu pai agia e o que a criança que fui desejava?","Que modelo paterno considero justo? Como ele aparece hoje?","Que ideias paternas antigas desejo trocar?","Dinheiro: o que penso e sinto ao ver alguém muito rico?","O que acredito que uma pessoa rica deveria fazer?","Quem admirei ou critiquei pela forma de lidar com dinheiro?","Que facilidade, dificuldade e crença aparecem na minha relação com dinheiro?","Relacionamento: o que penso e sinto diante de um compromisso sério?","Como seria uma relação ideal e o que preciso dar ou receber para me sentir amada?","Que perfil me atrai e que promessa ou desconforto ele traz?","Como eu julgava a relação dos meus pais?","Como esses modelos aparecem nas minhas relações?","Que crença desejo trocar para construir uma relação saudável?","Quais características despertam crítica ou raiva em mim?","Que habilidade presente nessas pessoas posso reconhecer e integrar?"]],
+["e13",13,"O que quero ensinar — e para quem","57–60","Relações e projeções",["Para quem sinto vontade de ensinar ou provar algo?","O que essa pessoa fez que parece absurdo?","O que acho que ela merecia?","Qual seria a forma certa de agir?","Como sofro hoje tentando demonstrar essa lição?","Outras pessoas ou situações que repetem esse padrão","O que muda quando abro mão de corrigir a história do outro?"]],
+["e14",14,"Cruz e pedestal","61–62","Relações e papéis",["Quais pessoas ou papéis desejo observar?","Quem parecia forte, bom ou superior?","Quem parecia fraco, mau ou inferior?","O que acontecia entre elas que me indignava?","O que eu desejava que uma delas fizesse?","Como me sentia quando ela não agia assim?","Por que acredito que sustentava essa situação?","Quem me trata hoje de forma parecida e como reajo?","Quem eu trato de forma parecida e como reage?","O que alguém de fora pensaria sobre minhas relações atuais?","O que compreendo agora por estar dentro da relação?","Conclusões ao ler minhas respostas"]],
+["e15",15,"Campo de dignidade","63","Limites e escolhas",["Área que quero investigar","Eu não aguento mais sentir que...","Sinto isso todas as vezes em que...","Quem está envolvido?","É difícil de lidar ou excede meu campo de dignidade? Por quê?","Como isso me prejudica?","O que seria digno e saudável para mim?","Qual limite ou ação concreta expressa isso?"]],
+["e16",16,"Navios, ganhos e medos","64–65","Limites e escolhas",["Área investigada","Eu não aguento mais sentir que...","Sinto isso quando...","Qual navio precisa ser queimado?","Ao mantê-lo, o que ganho?","O que temo que aconteça se encerrá-lo?","O que é fato e o que é previsão nesse medo?","Que escolha desejo fazer por mim?"]],
+["e17",17,"Mural do compromisso","65","Compromisso e ação",["Chega de me sentir assim...","Como mereço me sentir...","Abro mão destas migalhas ou ganhos...","Disponho-me a pensar, sentir e agir desta nova forma...","Frase curta que quero ver todos os dias"]],
+["e18",18,"Leitura do evento pela nova consciência","66","Compromisso e ação",["Situação que vivi","O que pensei, senti e fiz naquele momento?","Pela nova consciência, como compreendo o evento?","Se acontecer novamente, como desejo agir?"]],
+["e19",19,"Se eu não fizer, vou me arrepender","66–67","Compromisso e ação",["O que eu lamentaria não ter feito por mim?","Por que isso importa tanto?","Qual é o primeiro passo possível?","Quando pretendo realizá-lo?","Eu mereço me fazer feliz e me comprometo comigo a..."]],
+["bonus","B","Teste Bônus — Mapa do Desejo","68–71","Bônus",["1. O que quero conquistar?","2. Por que quero isso?","3. Como a ausência disso me faz sentir?","4. O que espero com a chegada dessa conquista?","5. Com o tempo, como posso me sentir se conseguir?","6. O que ganho se conseguir?","7. O que perco, arrisco ou preciso sustentar se conseguir?","8. Quais ideias e crenças estão ligadas a esse desejo?","9. Que cenas e julgamentos do passado formaram essas ideias?","Que padrão fica visível nas nove respostas?","Que forma mais livre e equilibrada de construir essa meta escolho?"]]
+].map(([id,n,title,pages,cat,labels])=>({id,n,title,pages,cat,bonus:id==="bonus",fields:labels.map((label,i)=>({id:`${id}_${i+1}`,label}))}));
 
-const questions = [
-  { title: "Emoções", intro: "Comece pelo que está vivo dentro de você agora.", prompt: "Responda com a primeira coisa que surgir, sem tentar corrigir ou deixar a resposta bonita.", fields: [
-    { id: "q1", label: "Eu não aguento mais me sentir...", help: "Nomeie as emoções, mesmo que pareçam contraditórias." }
-  ]},
-  { title: "Situações", intro: "Observe os cenários que têm se repetido ou consumido sua energia.", prompt: "Seja objetiva. Você pode citar mais de uma área da vida.", fields: [
-    { id: "q2", label: "Eu não aguento mais viver estas situações..." }
-  ]},
-  { title: "Palavras e mensagens", intro: "Algumas frases acionam medos, lembranças e reações automáticas.", prompt: "Registre tanto o que você ouve quanto o que acontece dentro de você.", fields: [
-    { id: "q3a", label: "Eu não aguento mais ouvir estas coisas..." },
-    { id: "q3b", label: "Quando ouço isso, eu...", help: "Descreva emoções, pensamentos e reações." }
-  ]},
-  { title: "Pessoas e relações", intro: "Olhe para as cobranças, expectativas e comportamentos que mais afetam você.", prompt: "Você pode omitir nomes e dados pessoais.", fields: [
-    { id: "q4a", label: "Eu não aguento mais que determinadas pessoas me..." },
-    { id: "q4b", label: "Quando elas fazem isso, eu..." }
-  ]},
-  { title: "Obrigações e sobrecargas", intro: "Perceba o que você sente que precisa sustentar, resolver ou controlar.", prompt: "Inclua tarefas, papéis, responsabilidades e exigências internas.", fields: [
-    { id: "q5a", label: "Eu não aguento mais ter que..." },
-    { id: "q5b", label: "Quando isso acontece, eu sinto e reajo assim..." }
-  ]},
-  { title: "Bloqueios", intro: "Dê nome ao que parece sempre escapar, travar ou não se concretizar.", prompt: "Não procure uma explicação ainda. Apenas descreva o que acontece.", fields: [
-    { id: "q6a", label: "Eu não aguento mais não conseguir..." },
-    { id: "q6b", label: "Por não conseguir, eu acabo..." }
-  ]},
-  { title: "Faltas e desejos", intro: "Identifique o que você sente que está ausente na sua vida.", prompt: "As repetições são importantes. Não apague algo só porque já apareceu antes.", fields: [
-    { id: "q7a", label: "Eu não aguento mais não ter..." },
-    { id: "q7b", label: "Por não ter isso, eu sinto e reajo assim..." }
-  ]},
-  { title: "Necessidades emocionais", intro: "Agora observe os estados internos que você mais deseja experimentar.", prompt: "Exemplos: amada, acolhida, segura, reconhecida, livre, vista, capaz.", fields: [
-    { id: "q8a", label: "Eu não aguento mais não me sentir..." },
-    { id: "q8b", label: "Por não me sentir assim, eu tenho agido desta maneira..." }
-  ]},
-  { title: "História familiar", intro: "Olhe para o passado com honestidade e delicadeza, sem buscar culpados.", prompt: "Registre o que você desejava receber e o que sentia que recebia.", fields: [
-    { id: "q9pa", label: "Pai, eu queria que você..." },
-    { id: "q9pb", label: "Mas eu sentia que você..." },
-    { id: "q9ma", label: "Mãe, eu queria que você..." },
-    { id: "q9mb", label: "Mas eu sentia que você..." },
-    { id: "q9fa", label: "Irmãos, avós, tios ou outros familiares, eu queria que vocês..." },
-    { id: "q9fb", label: "Mas eu sentia que vocês..." }
-  ]}
-];
-
-const defaultState = { name: "", date: new Date().toISOString().slice(0,10), answers: {}, screen: "home", step: 0 };
-let state = loadState();
-let mapFile = null;
-let mapPreviewUrl = null;
-
-function loadState() {
-  try { return { ...defaultState, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") }; }
-  catch { return { ...defaultState }; }
-}
-
-function saveState() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  const label = document.getElementById("saveLabel");
-  if (label) {
-    label.textContent = "Salvando...";
-    clearTimeout(saveState.timer);
-    saveState.timer = setTimeout(() => label.textContent = "Salvo neste navegador", 450);
-  }
-}
-
-function esc(value = "") {
-  return String(value).replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
-}
-
-function answered(question) { return question.fields.every(f => (state.answers[f.id] || "").trim()); }
-function completedCount() { return questions.filter(answered).length; }
-function progress() { return Math.round((completedCount() / questions.length) * 100); }
-
-function render() {
-  const root = document.getElementById("mainContent");
-  if (state.screen === "journey") root.innerHTML = renderJourney();
-  else if (state.screen === "summary") root.innerHTML = renderSummary();
-  else root.innerHTML = renderHome();
-  bindInputs();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-function renderHome() {
-  return `<section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">Seu ponto de partida</p>
-      <h1>Olhe para dentro.<br><em>Veja o padrão.</em></h1>
-      <p>Um percurso guiado por nove perguntas para organizar o que você sente, vive e repete — antes de correlacionar suas respostas com o mapa astral.</p>
-      <div class="feature-row">
-        <span class="feature-pill">9 etapas guiadas</span><span class="feature-pill">Salvamento automático</span><span class="feature-pill">Relatório ao final</span>
-      </div>
-    </div>
-    <div class="hero-card">
-      <h2>Vamos começar?</h2>
-      <p>Reserve alguns minutos e responda com a primeira coisa que surgir. Não existem respostas certas.</p>
-      <div class="field"><label for="name">Seu nome ou identificação</label><input id="name" data-profile="name" type="text" value="${esc(state.name)}" placeholder="Você pode usar apenas o primeiro nome"></div>
-      <div class="field"><label for="date">Data deste registro</label><input id="date" data-profile="date" type="date" value="${esc(state.date)}"></div>
-      <button class="btn btn-primary btn-wide" type="button" data-action="start">${completedCount() ? "Continuar meu caderno" : "Iniciar meu Raio-X"} <span aria-hidden="true">→</span></button>
-      ${completedCount() ? `<button class="btn btn-ghost btn-wide" style="margin-top:10px" type="button" data-action="summary">Ver relatório atual</button>` : ""}
-      <div class="privacy-note"><span aria-hidden="true">◉</span><span>Suas respostas ficam armazenadas somente neste navegador. Nenhum dado é enviado automaticamente.</span></div>
-    </div>
-  </section>`;
-}
-
-function renderJourney() {
-  const q = questions[state.step];
-  return `<section class="journey">
-    <aside class="side-panel">
-      <h2>Raio-X Inicial</h2><p>${esc(state.name || "Seu percurso")} · ${formatDate(state.date)}</p>
-      <div class="progress-track"><div class="progress-fill" style="width:${progress()}%"></div></div><div class="progress-label">${completedCount()} de 9 etapas completas</div>
-      <ol class="step-list">${questions.map((item,i) => `<li><button class="step-button ${i === state.step ? "active" : ""} ${answered(item) ? "done" : ""}" type="button" data-step="${i}"><span class="step-num">${i+1}</span><span>${esc(item.title)}</span><span class="step-check">${answered(item) ? "✓" : ""}</span></button></li>`).join("")}</ol>
-    </aside>
-    <article class="question-card">
-      <div class="question-top"><div><span class="question-number">Pergunta ${state.step + 1} de 9</span><h1>${esc(q.title)}</h1></div></div>
-      <p class="question-intro">${esc(q.intro)}</p><div class="prompt-box">${esc(q.prompt)}</div>
-      <div class="question-fields">${q.fields.map(f => `<div class="field"><label for="${f.id}">${esc(f.label)}</label>${f.help ? `<span class="field-help">${esc(f.help)}</span>` : ""}<textarea id="${f.id}" data-answer="${f.id}" placeholder="Escreva livremente...">${esc(state.answers[f.id] || "")}</textarea></div>`).join("")}</div>
-      <div class="question-actions">
-        <button class="btn btn-ghost" type="button" data-action="prev">${state.step === 0 ? "Voltar ao início" : "← Pergunta anterior"}</button>
-        <button class="btn btn-primary" type="button" data-action="next">${state.step === questions.length - 1 ? "Gerar meu relatório" : "Próxima pergunta →"}</button>
-      </div>
-    </article>
-  </section>`;
-}
-
-function getThemes() {
-  const text = Object.values(state.answers).join(" ").toLowerCase();
-  const groups = [
-    ["Relações e vínculos", /relacion|marido|homem|parceir|amor|amada|casamento/],
-    ["Família e pertencimento", /famíl|filh|mãe|mae|pai|irmã|irmao|irmão|avó|avô/],
-    ["Trabalho e realização", /trabalh|carreira|profiss|escritório|projeto|cliente|foco/],
-    ["Dinheiro e segurança", /dinheir|financeir|conta|prosper|verba|pagar|dívida|divida/],
-    ["Corpo e bem-estar", /corpo|dor|saúde|saude|comer|aliment|malhar|dormir|sono/],
-    ["Reconhecimento e cobrança", /reconhec|cobran|julg|perfei|resultado|troféu|trofeu/],
-    ["Paz e liberdade", /paz|sossego|liberdade|leveza|segura|segurança/]
-  ];
-  const found = groups.filter(([,re]) => re.test(text)).map(([name]) => name);
-  return found.length ? found : ["Temas a serem identificados após o preenchimento"];
-}
-
-function answerText(id) { return (state.answers[id] || "").trim() || "Ainda não respondido."; }
-function answerClass(id) { return (state.answers[id] || "").trim() ? "" : "empty-answer"; }
-
-function renderSummary() {
-  const cards = questions.map((q,i) => `<section class="summary-card ${i === 8 ? "full" : ""}"><h2>${i+1}. ${esc(q.title)}</h2>${q.fields.map(f => `<h3>${esc(f.label)}</h3><p class="${answerClass(f.id)}">${esc(answerText(f.id))}</p>`).join("")}</section>`).join("");
-  return `<section class="summary-wrap">
-    <div class="summary-head"><div><p class="eyebrow">Relatório Raio-X Inicial</p><h1>Seu ponto zero.</h1></div><p>Este relatório organiza o que você escreveu. Ele não substitui uma análise profissional nem interpreta sozinho o seu mapa astral.</p></div>
-    <div class="summary-toolbar">
-      <button class="btn btn-primary" type="button" data-action="download">Baixar em Markdown</button>
-      <button class="btn btn-secondary" type="button" data-action="copy">Copiar para Madame Aline</button>
-      <button class="btn btn-ghost" type="button" data-action="print">Imprimir / salvar em PDF</button>
-      <button class="btn btn-ghost" type="button" data-action="edit">Revisar respostas</button>
-      <button class="btn btn-danger" type="button" data-action="reset">Apagar tudo</button>
-    </div>
-    <div class="summary-grid">
-      <section class="summary-card full"><h2>Identificação</h2><p><strong>Nome:</strong> ${esc(state.name || "Não informado")}<br><strong>Data:</strong> ${formatDate(state.date)}<br><strong>Etapas completas:</strong> ${completedCount()} de 9</p></section>
-      <section class="summary-card full"><h2>Temas presentes nas respostas</h2><div class="theme-tags">${getThemes().map(t => `<span class="theme-tag">${esc(t)}</span>`).join("")}</div><div class="notice">Os temas acima são apenas uma organização por palavras recorrentes. Eles não constituem diagnóstico nem interpretação astrológica.</div></section>
-      ${cards}
-      <section class="summary-card full"><h2>Mapa astral</h2><div class="map-drop"><label for="mapFile">Adicione a imagem do seu mapa para preparar o envio à Madame Aline</label><input id="mapFile" type="file" accept="image/png,image/jpeg,image/webp">${mapPreviewUrl ? `<img class="map-preview" src="${mapPreviewUrl}" alt="Prévia do mapa astral selecionado">` : ""}<p style="color:var(--muted);font-size:.78rem;margin:10px 0 0">A imagem não é salva nem enviada. Ela permanece apenas aberta nesta tela.</p></div></section>
-    </div>
-  </section>`;
-}
-
-function formatDate(date) {
-  if (!date) return "Não informada";
-  const [y,m,d] = date.split("-"); return `${d}/${m}/${y}`;
-}
-
-function buildMarkdown(forMadame = false) {
-  const lines = ["# Relatório Raio-X Inicial", "", `**Nome:** ${state.name || "Não informado"}`, `**Data:** ${formatDate(state.date)}`, "", "## Temas recorrentes", "", getThemes().map(t => `- ${t}`).join("\n"), ""];
-  questions.forEach((q,i) => {
-    lines.push(`## ${i+1}. ${q.title}`, "");
-    q.fields.forEach(f => lines.push(`**${f.label}**`, "", answerText(f.id), ""));
-  });
-  if (forMadame) lines.push("## Solicitação à Madame Aline", "", "Com base nas respostas acima e na imagem do meu mapa astral que enviarei junto, identifique quais características do mapa aparecem evidenciadas nas respostas. Organize a análise no formato: evidência da resposta → código astrológico → hipótese de investigação → nível de sustentação. Não faça diagnósticos nem afirmações deterministas. Gere meu Relatório Raio-X Inicial.");
-  return lines.join("\n");
-}
-
-function downloadMarkdown() {
-  const blob = new Blob([buildMarkdown(false)], { type: "text/markdown;charset=utf-8" });
-  const url = URL.createObjectURL(blob); const link = document.createElement("a");
-  link.href = url; link.download = `relatorio-raio-x-${(state.name || "inicial").toLowerCase().replace(/[^a-z0-9]+/g,"-")}.md`; link.click(); URL.revokeObjectURL(url);
-  toast("Relatório baixado");
-}
-
-async function copyForMadame() {
-  try { await navigator.clipboard.writeText(buildMarkdown(true)); toast("Conteúdo copiado para a Madame Aline"); }
-  catch { toast("Não foi possível copiar automaticamente"); }
-}
-
-function bindInputs() {
-  document.querySelectorAll("[data-profile]").forEach(el => el.addEventListener("input", e => { state[e.target.dataset.profile] = e.target.value; saveState(); }));
-  document.querySelectorAll("[data-answer]").forEach(el => el.addEventListener("input", e => { state.answers[e.target.dataset.answer] = e.target.value; saveState(); }));
-  document.querySelectorAll("[data-step]").forEach(el => el.addEventListener("click", e => { state.step = Number(e.currentTarget.dataset.step); saveState(); render(); }));
-  const file = document.getElementById("mapFile");
-  if (file) file.addEventListener("change", e => { mapFile = e.target.files[0] || null; if (mapPreviewUrl) URL.revokeObjectURL(mapPreviewUrl); mapPreviewUrl = mapFile ? URL.createObjectURL(mapFile) : null; render(); });
-}
-
-document.addEventListener("click", e => {
-  const button = e.target.closest("[data-action]"); if (!button) return;
-  const action = button.dataset.action;
-  if (action === "home") { state.screen = "home"; saveState(); render(); }
-  if (action === "start") { state.screen = "journey"; state.step = Math.min(questions.findIndex(q => !answered(q)) === -1 ? 0 : questions.findIndex(q => !answered(q)), 8); saveState(); render(); }
-  if (action === "prev") { if (state.step === 0) state.screen = "home"; else state.step--; saveState(); render(); }
-  if (action === "next") { if (state.step === 8) state.screen = "summary"; else state.step++; saveState(); render(); }
-  if (action === "summary") { state.screen = "summary"; saveState(); render(); }
-  if (action === "edit") { state.screen = "journey"; saveState(); render(); }
-  if (action === "download") downloadMarkdown();
-  if (action === "copy") copyForMadame();
-  if (action === "print") window.print();
-  if (action === "reset" && confirm("Deseja apagar todas as respostas salvas neste navegador? Esta ação não pode ser desfeita.")) { localStorage.removeItem(STORAGE_KEY); state = { ...defaultState, answers: {} }; if (mapPreviewUrl) URL.revokeObjectURL(mapPreviewUrl); mapPreviewUrl = null; mapFile = null; render(); toast("Caderno apagado"); }
-});
-
-function toast(message) { const el = document.getElementById("toast"); el.textContent = message; el.classList.add("show"); clearTimeout(toast.timer); toast.timer = setTimeout(() => el.classList.remove("show"), 2400); }
-
+const base={name:"",date:new Date().toISOString().slice(0,10),answers:{},screen:"index",current:"e01"};
+let state=load(), mapUrl=null;
+function load(){try{let x=JSON.parse(localStorage.getItem(KEY)||"null");if(x)return{...base,...x,answers:x.answers||{}};let o=JSON.parse(localStorage.getItem(OLD)||"null");if(o){let a={};let ids=["q1","q2","q3a","q3b","q4a","q4b","q5a","q5b","q6a","q6b","q7a","q7b","q8a","q8b","q9pa","q9pb","q9ma","q9mb","q9fa","q9fb"];ids.forEach((k,i)=>{if(o.answers?.[k])a[`e02_${i+1}`]=o.answers[k]});return{...base,name:o.name||"",date:o.date||base.date,answers:a,current:"e02"}}}catch{}return{...base,answers:{}}}
+function save(){localStorage.setItem(KEY,JSON.stringify(state));let l=document.querySelector("#saveLabel");if(l){l.textContent="Salvando...";clearTimeout(save.t);save.t=setTimeout(()=>l.textContent="Salvo neste navegador",350)}}
+const esc=(s="")=>String(s).replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
+const done=f=>!!(state.answers[f.id]||"").trim(), prog=e=>Math.round(e.fields.filter(done).length/e.fields.length*100), overall=()=>Math.round(data.reduce((s,e)=>s+e.fields.filter(done).length,0)/data.reduce((s,e)=>s+e.fields.length,0)*100);
+function render(){let r=document.querySelector("#mainContent");r.innerHTML=state.screen==="exercise"?exercise():state.screen==="report"?report():index();bind();scrollTo({top:0,behavior:"smooth"})}
+function card(e){let p=prog(e);return`<button class="exercise-card ${e.bonus?"bonus-card":""}" data-open="${e.id}"><div class="card-top"><span class="card-number">${e.bonus?"BÔNUS":String(e.n).padStart(2,"0")}</span><span class="card-pages">p. ${e.pages}</span></div><span class="card-category">${esc(e.cat)}</span><h3>${esc(e.title)}</h3><div class="card-progress"><div class="progress-track"><div class="progress-fill" style="width:${p}%"></div></div><span>${p}%</span></div><span class="card-link">${p?"Continuar":"Começar"} →</span></button>`}
+function index(){let regular=data.filter(e=>!e.bonus),b=data.at(-1),started=data.filter(e=>e.fields.some(done)).length;return`<section class="index-page"><div class="index-hero"><div><p class="eyebrow">Caderno completo · 19 exercícios + bônus</p><h1>Seu percurso de <em>investigação.</em></h1><p>Escolha pelo índice, responda no seu ritmo e acompanhe seu avanço.</p></div><div class="index-profile"><div class="profile-fields"><div class="field"><label>Nome ou identificação</label><input data-profile="name" value="${esc(state.name)}" placeholder="Seu primeiro nome"></div><div class="field"><label>Data de início</label><input type="date" data-profile="date" value="${esc(state.date)}"></div></div><div class="overall"><div><strong>${overall()}%</strong><span>do caderno preenchido</span></div><div class="progress-track"><div class="progress-fill" style="width:${overall()}%"></div></div><small>${started} de 20 exercícios iniciados</small></div><button class="btn btn-primary btn-wide" data-action="report">Ver relatório geral</button></div></div><div class="index-heading"><div><span>Índice</span><h2>Exercícios do caderno</h2></div><p>As respostas são salvas automaticamente.</p></div><div class="exercise-grid">${regular.map(card).join("")}</div><div class="bonus-zone"><div><p class="eyebrow">Teste extra</p><h2>Uma meta, nove camadas.</h2><p>Investigue relacionamento, vendas, dinheiro ou qualquer outra conquista.</p></div>${card(b)}</div></section>`}
+function exercise(){let e=data.find(x=>x.id===state.current)||data[0],i=data.indexOf(e);return`<section class="workbook-page"><button class="back-index" data-action="index">← Voltar ao índice</button><article class="exercise-form"><header class="exercise-header"><div><span class="question-number">${e.bonus?"Teste bônus":`Exercício ${e.n}`} · páginas ${e.pages}</span><h1>${esc(e.title)}</h1><p>${e.bonus?"Escolha um desejo e percorra nove camadas para revelar expectativas, ganhos, perdas e crenças.":"Responda com a primeira coisa que surgir. Você pode pausar e continuar quando quiser."}</p></div><div class="exercise-meter"><strong>${prog(e)}%</strong><span>preenchido</span></div></header><div class="exercise-fields">${e.fields.map(f=>`<div class="field"><label for="${f.id}">${esc(f.label)}</label><textarea id="${f.id}" data-answer="${f.id}" placeholder="Escreva livremente...">${esc(state.answers[f.id]||"")}</textarea></div>`).join("")}</div><div class="question-actions exercise-nav"><button class="btn btn-ghost" data-action="prev" ${i===0?"disabled":""}>← Anterior</button><button class="btn btn-secondary" data-action="index">Salvar e ver índice</button><button class="btn btn-primary" data-action="next">${i===data.length-1?"Ver relatório geral":"Próximo exercício →"}</button></div></article></section>`}
+function themes(){let t=Object.values(state.answers).join(" ").toLowerCase(),g=[["Relações e vínculos",/relacion|marido|amor|casamento/],["Família e pertencimento",/famíl|filh|mãe|pai|irmã|avó/],["Trabalho e realização",/trabalh|carreira|projeto|cliente|venda/],["Dinheiro e segurança",/dinheir|financeir|prosper|pagar|rico/],["Reconhecimento e cobrança",/reconhec|cobran|julg|perfei|aprova/],["Paz, prazer e liberdade",/paz|sossego|liberdade|prazer|segura/],["Responsabilidade e controle",/respons|control|dar conta|resolver/]];let x=g.filter(([,r])=>r.test(t)).map(([n])=>n);return x.length?x:["Preencha o caderno para revelar temas recorrentes"]}
+function report(){let blocks=data.filter(e=>e.fields.some(done)).map(e=>`<section class="summary-card full"><div class="report-card-head"><span>${e.bonus?"Bônus":`Exercício ${e.n}`}</span><strong>${prog(e)}%</strong></div><h2>${esc(e.title)}</h2>${e.fields.filter(done).map(f=>`<h3>${esc(f.label)}</h3><p>${esc(state.answers[f.id])}</p>`).join("")}</section>`).join("");return`<section class="summary-wrap"><div class="summary-head"><div><p class="eyebrow">Relatório geral</p><h1>Seu caderno, <em>em perspectiva.</em></h1></div><p>Organização fiel das suas respostas, sem diagnóstico ou interpretação automática.</p></div><div class="summary-toolbar"><button class="btn btn-primary" data-action="download">Baixar em Markdown</button><button class="btn btn-secondary" data-action="copy">Copiar para Madame Aline</button><button class="btn btn-ghost" data-action="print">Imprimir / salvar em PDF</button><button class="btn btn-ghost" data-action="index">Voltar ao índice</button><button class="btn btn-danger" data-action="reset">Apagar tudo</button></div><div class="summary-grid"><section class="summary-card full"><h2>Visão geral</h2><p><strong>Nome:</strong> ${esc(state.name||"Não informado")}<br><strong>Progresso:</strong> ${overall()}%</p></section><section class="summary-card full"><h2>Temas presentes</h2><div class="theme-tags">${themes().map(t=>`<span class="theme-tag">${t}</span>`).join("")}</div></section>${blocks||'<section class="summary-card full"><p>Nenhuma resposta ainda.</p></section>'}<section class="summary-card full"><h2>Mapa astral</h2><div class="map-drop"><label>Adicione temporariamente a imagem do mapa</label><input id="mapFile" type="file" accept="image/*">${mapUrl?`<img class="map-preview" src="${mapUrl}" alt="Prévia do mapa">`:""}<p>A imagem não é salva nem enviada.</p></div></section></div></section>`}
+function md(madame=false){let a=["# Caderno Digital Raio-X Astrológico","",`**Nome:** ${state.name||"Não informado"}`,`**Progresso:** ${overall()}%`,""];data.forEach(e=>{let fs=e.fields.filter(done);if(!fs.length)return;a.push(`## ${e.bonus?"Bônus":`Exercício ${e.n}`} — ${e.title}`,"");fs.forEach(f=>a.push(`**${f.label}**`,"",state.answers[f.id],""))});if(madame)a.push("## Solicitação à Madame Aline","","Identifique evidências, padrões e códigos astrológicos relacionados, diferenciando observação, hipótese e pergunta de aprofundamento. Não faça diagnósticos nem afirmações deterministas.");return a.join("\n")}
+function bind(){document.querySelectorAll("[data-profile]").forEach(x=>x.oninput=e=>{state[e.target.dataset.profile]=e.target.value;save()});document.querySelectorAll("[data-answer]").forEach(x=>x.oninput=e=>{state.answers[e.target.dataset.answer]=e.target.value;save();let ex=data.find(y=>y.id===state.current),m=document.querySelector(".exercise-meter strong");if(m)m.textContent=prog(ex)+"%"});document.querySelectorAll("[data-open]").forEach(x=>x.onclick=e=>{state.current=e.currentTarget.dataset.open;state.screen="exercise";save();render()});let f=document.querySelector("#mapFile");if(f)f.onchange=e=>{if(mapUrl)URL.revokeObjectURL(mapUrl);mapUrl=e.target.files[0]?URL.createObjectURL(e.target.files[0]):null;render()}}
+document.onclick=async e=>{let b=e.target.closest("[data-action]");if(!b)return;let a=b.dataset.action,i=data.findIndex(x=>x.id===state.current);if(a==="index"||a==="home")state.screen="index";if(a==="report")state.screen="report";if(a==="prev"&&i>0)state.current=data[i-1].id;if(a==="next"){if(i<data.length-1)state.current=data[i+1].id;else state.screen="report"}if(a==="download"){let u=URL.createObjectURL(new Blob([md()],{type:"text/markdown"})),l=document.createElement("a");l.href=u;l.download="caderno-raio-x.md";l.click();URL.revokeObjectURL(u);return}if(a==="copy"){await navigator.clipboard.writeText(md(true));return}if(a==="print"){print();return}if(a==="reset"&&confirm("Apagar todas as respostas deste navegador?")){localStorage.removeItem(KEY);localStorage.removeItem(OLD);state={...base,answers:{}}}save();render()};
 render();
