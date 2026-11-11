@@ -36,7 +36,16 @@ conteudo/
   escopo-teorico.md   Estrutura viva do conteúdo consolidado
   glossario.md        Vocabulário oficial do método
 decisoes/             Registro de decisões conceituais e editoriais
+aplicativo-caderno-digital/
+                      Primeira versão do caderno digital guiado
 ```
+
+## Caderno digital
+
+A primeira versão privada do **Caderno Digital Raio-X Astrológico** conduz a mentorada pelas nove perguntas do Raio-X Inicial, salva o progresso no navegador e gera um relatório-resumo das respostas.
+
+- [Abrir o aplicativo privado](https://caderno-raio-x-astrologico.alinesantosarq.chatgpt.site)
+- [Consultar o código e as orientações](aplicativo-caderno-digital/README.md)
 
 ## Fluxo de trabalho
 

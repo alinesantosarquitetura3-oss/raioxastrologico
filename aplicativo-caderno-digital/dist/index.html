@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#241a33">
+  <meta name="description" content="Caderno digital guiado do Raio-X Astrológico.">
+  <title>Caderno Raio-X Astrológico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <button class="brand" type="button" data-action="home" aria-label="Voltar ao início">
+        <img src="assets/logo.png" alt="">
+        <span><strong>Raio-X</strong><small>Caderno Astrológico</small></span>
+      </button>
+      <div class="save-state" aria-live="polite"><span class="save-dot"></span><span id="saveLabel">Salvo neste navegador</span></div>
+    </header>
+
+    <main id="mainContent"></main>
+
+    <footer class="footer">
+      <span>Raio-X Astrológico</span>
+      <span>Autoconhecimento com responsabilidade e privacidade</span>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
